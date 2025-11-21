@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Gabriel Rocha - Estudante de Ciência da Computação">
+    <title>Gabriel Rocha | Portfolio</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,30 +21,38 @@
         <!-- Coluna Esquerda: Perfil Fixo -->
         <aside class="profile-section">
             <div class="profile-header">
-                <h1>Gabriel Rocha</h1>           
+                <div class="avatar-placeholder">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <h1>Gabriel Rocha</h1>
+                <p class="role">Estudante de Ciência da Computação</p>
+                
                 <div class="social-links">
-                    <a href="https://github.com/GabrielNFR" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/gabriel-rocha-5503b52b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/GabrielNFR" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/gabriel-rocha-5503b52b8/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
+            <div class="separator"></div>
+
             <div class="skills-container">
-                <h3>Stack</h3>
+                <h3>Tech Stack</h3>
                 <div class="tags">
                     <span>C</span>
                     <span>C++</span>
                     <span>Python</span>
+                    <span>Git</span>
                 </div>
             </div>
         </aside>
 
-        <!-- Coluna Direita: Conteúdo Rolável se necessário -->
+        <!-- Coluna Direita: Conteúdo -->
         <main class="content-section">
             
             <!-- Sobre -->
             <section class="card about-card">
                 <h2>Sobre Mim</h2>
-                <p>Estudante de Ciência da Computação com interesse em backend e tecnologias de baixo nível.</p>
+                <p>Estudante de Ciência da Computação apaixonado por resolver problemas complexos. Tenho um forte interesse em desenvolvimento <strong>backend</strong>, sistemas embarcados e tecnologias de baixo nível. Busco criar soluções eficientes e escaláveis.</p>
             </section>
 
             <!-- Projetos -->
@@ -49,10 +65,16 @@
                         <div class="card-header">
                             <h3>Mercado Cesar</h3>
                             <div class="links">
-                                <a href="https://github.com/GabrielNFR/Mercado-Cesar" title="Código"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/GabrielNFR/Mercado-Cesar" target="_blank" title="Ver Código"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <p>[Descrição curta. Ex: Landing page para advocacia.]</p>
+                        <p>Uma aplicação web focada na experiência do usuário para simulação de mercado, com gerenciamento de carrinho e produtos, entre outras funcionalidades.</p>
+                        <div class="tech-stack-mini">
+                            <small>Python</small>
+                            <small>HTML</small>
+                            <small>JS</small>
+                            <small>CSS</small>
+                        </div>
                     </article>
 
                     <!-- Projeto 2 -->
@@ -60,10 +82,14 @@
                         <div class="card-header">
                             <h3>Jogo de Reputação RFID</h3>
                             <div class="links">
-                                <a href="https://github.com/GabrielNFR/Sistema-RFID-de-Cartas" title="Código"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/GabrielNFR/Sistema-RFID-de-Cartas" target="_blank" title="Ver Código"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <p>Sistema de leitura de cartões RFID e cálculo de reputação para um jogo de tabuleiro</p>
+                        <p>Sistema de integração hardware-software que utiliza leitura de cartões RFID para calcular e gerenciar reputação em um jogo de tabuleiro interativo.</p>
+                        <div class="tech-stack-mini">
+                            <small>C++</small>
+                            <small>Arduino</small>
+                        </div>
                     </article>
 
                     <!-- Projeto 3 -->
@@ -71,11 +97,13 @@
                         <div class="card-header">
                             <h3>Gerenciamento de Hóspedes</h3>
                             <div class="links">
-                                <a href="https://github.com/GabrielNFR/GerenciamentoHospedes" title="Código"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/GabrielNFR/GerenciamentoHospedes" target="_blank" title="Ver Código"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <p>Um sistema para gerenciar hóspedes em um hotel</p>
-                        <small>Tech: Node, API</small>
+                        <p>Sistema desenvolvido para o gerenciamento completo de reservas e hóspedes de um hotel, com validações e persistência de dados.</p>
+                        <div class="tech-stack-mini">
+                            <small>C</small>
+                        </div>
                     </article>
 
                 </div>
