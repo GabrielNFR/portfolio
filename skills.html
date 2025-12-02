@@ -3,7 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Minhas Habilidades - GabrielNFR</title>
-    <link rel="stylesheet" href="style.css"> <!-- Seu CSS atual -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Flexbox para o layout geral */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Grid para as categorias de habilidades */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card de cada categoria com Flexbox */
+        .skill-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .skill-card p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Flexbox para lista de tecnologias */
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .tech-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Ícones para cada categoria (usando cores) */
+        .backend { border-left: 4px solid #3776ab; }
+        .frontend { border-left: 4px solid #f0db4f; }
+        .hardware { border-left: 4px solid #00979d; }
+    </style>
 </head>
 <body>
     <header>
@@ -12,37 +101,40 @@
     </header>
 
     <main>
-        <!-- Categoria 1: Backend & Dados -->
-        <section>
-            <h2>Backend & Dados</h2>
-            <p>Tecnologias que uso para lógica e análise:</p>
-            <ul>
-                <li><strong>Python</strong> (Automação e Análise de Dados)</li>
-                <li><strong>Django</strong> (Desenvolvimento Web Robusto)</li>
-                <li><strong>Pandas/NumPy</strong> (Ciência de Dados - Projeto Churn)</li>
-            </ul>
-        </section>
+        <!-- Grid container para as categorias -->
+        <div class="skills-grid">
+            <!-- Categoria 1: Backend & Dados -->
+            <section class="skill-card backend">
+                <h2>Backend & Dados</h2>
+                <p>Tecnologias que uso para lógica e análise:</p>
+                <ul class="tech-list">
+                    <li><strong>Python</strong> (Automação e Análise de Dados)</li>
+                    <li><strong>Django</strong> (Desenvolvimento Web Robusto)</li>
+                    <li><strong>Pandas/NumPy</strong> (Ciência de Dados - Projeto Churn)</li>
+                </ul>
+            </section>
 
-        <!-- Categoria 2: Frontend -->
-        <section>
-            <h2>Frontend</h2>
-            <p>Criação de interfaces visuais:</p>
-            <ul>
-                <li><strong>HTML5 & CSS3</strong></li>
-                <li><strong>JavaScript</strong> (Interações básicas)</li>
-            </ul>
-        </section>
+            <!-- Categoria 2: Frontend -->
+            <section class="skill-card frontend">
+                <h2>Frontend</h2>
+                <p>Criação de interfaces visuais:</p>
+                <ul class="tech-list">
+                    <li><strong>HTML5 & CSS3</strong></li>
+                    <li><strong>JavaScript</strong> (Interações básicas)</li>
+                </ul>
+            </section>
 
-        <!-- Categoria 3: Outros -->
-        <section>
-            <h2>Hardware & Outros</h2>
-            <p>Prototipagem e desenvolvimento criativo:</p>
-            <ul>
-                <li><strong>C++ / Arduino</strong> (Projetos IoT e RFID)</li>
-                <li><strong>Git & GitHub</strong> (Controle de versão)</li>
-                <li><strong>Bitsy</strong> (Game Dev Narrativo)</li>
-            </ul>
-        </section>
+            <!-- Categoria 3: Outros -->
+            <section class="skill-card hardware">
+                <h2>Hardware & Outros</h2>
+                <p>Prototipagem e desenvolvimento criativo:</p>
+                <ul class="tech-list">
+                    <li><strong>C++ / Arduino</strong> (Projetos IoT e RFID)</li>
+                    <li><strong>Git & GitHub</strong> (Controle de versão)</li>
+                    <li><strong>Bitsy</strong> (Game Dev Narrativo)</li>
+                </ul>
+            </section>
+        </div>
     </main>
 </body>
 </html>
