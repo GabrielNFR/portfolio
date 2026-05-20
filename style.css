@@ -281,6 +281,38 @@ h2::before {
     border-top: 1px solid var(--border);
 }
 
+.repo-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    padding: 0;
+}
+
+.repo-list li {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.repo-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.repo-list a:hover {
+    color: var(--accent);
+}
+
+.repo-list small {
+    color: var(--text-secondary);
+}
+
 /* --- Mobile --- */
 @media (max-width: 850px) {
     body {
